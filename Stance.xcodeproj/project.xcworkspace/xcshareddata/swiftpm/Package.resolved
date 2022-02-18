@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SASIBViews",
+        "repositoryURL": "https://github.com/AnupSukumaran/SASIBViews.git",
+        "state": {
+          "branch": null,
+          "revision": "db215d34f36d2917b913b65504c3709b7943f68f",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

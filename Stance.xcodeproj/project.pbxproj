@@ -16,6 +16,8 @@
 		C542E8BB27C00454009B84C1 /* StanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8BA27C00454009B84C1 /* StanceTests.swift */; };
 		C542E8C527C00454009B84C1 /* StanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C427C00454009B84C1 /* StanceUITests.swift */; };
 		C542E8C727C00454009B84C1 /* StanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */; };
+		C542E8D527C0213A009B84C1 /* SASIBViews in Frameworks */ = {isa = PBXBuildFile; productRef = C542E8D427C0213A009B84C1 /* SASIBViews */; };
+		C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE540027C033E700A658A0 /* UICustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		C542E8C027C00454009B84C1 /* StanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8C427C00454009B84C1 /* StanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITests.swift; sourceTree = "<group>"; };
 		C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5BE540027C033E700A658A0 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C542E8D527C0213A009B84C1 /* SASIBViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 				C542E8AC27C00453009B84C1 /* Assets.xcassets */,
 				C542E8AE27C00453009B84C1 /* LaunchScreen.storyboard */,
 				C542E8B127C00453009B84C1 /* Info.plist */,
+				C5BE540027C033E700A658A0 /* UICustomView.swift */,
 			);
 			path = Stance;
 			sourceTree = "<group>";
@@ -141,8 +146,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				C542E8D727C02187009B84C1 /* PBXTargetDependency */,
 			);
 			name = Stance;
+			packageProductDependencies = (
+				C542E8D427C0213A009B84C1 /* SASIBViews */,
+			);
 			productName = Stance;
 			productReference = C542E8A027C0044F009B84C1 /* Stance.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +224,9 @@
 				Base,
 			);
 			mainGroup = C542E89727C0044F009B84C1;
+			packageReferences = (
+				C542E8D327C0213A009B84C1 /* XCRemoteSwiftPackageReference "SASIBViews" */,
+			);
 			productRefGroup = C542E8A127C0044F009B84C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C542E8A827C0044F009B84C1 /* ViewController.swift in Sources */,
+				C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */,
 				C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,6 +306,10 @@
 			isa = PBXTargetDependency;
 			target = C542E89F27C0044F009B84C1 /* Stance */;
 			targetProxy = C542E8C127C00454009B84C1 /* PBXContainerItemProxy */;
+		};
+		C542E8D727C02187009B84C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C542E8D627C02187009B84C1 /* SASIBViews */;
 		};
 /* End PBXTargetDependency section */
 
@@ -604,6 +621,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C542E8D327C0213A009B84C1 /* XCRemoteSwiftPackageReference "SASIBViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnupSukumaran/SASIBViews.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C542E8D427C0213A009B84C1 /* SASIBViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C542E8D327C0213A009B84C1 /* XCRemoteSwiftPackageReference "SASIBViews" */;
+			productName = SASIBViews;
+		};
+		C542E8D627C02187009B84C1 /* SASIBViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C542E8D327C0213A009B84C1 /* XCRemoteSwiftPackageReference "SASIBViews" */;
+			productName = SASIBViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C542E89827C0044F009B84C1 /* Project object */;
 }
