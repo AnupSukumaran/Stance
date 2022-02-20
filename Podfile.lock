@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - Charts
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: c2a6257cb25d8f132ea3f54ccf1c69b8cd64acbe
+
+COCOAPODS: 1.11.2
