@@ -7,6 +7,7 @@ target 'Stance' do
 
   # Pods for Stance
 	pod 'Charts'
+	pod 'SidebarOverlay'
   pod 'XLPagerTabStrip'
 
   target 'StanceTests' do

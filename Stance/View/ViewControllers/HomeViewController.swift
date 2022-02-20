@@ -11,8 +11,11 @@ import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
 
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     var isReload = false
+    
+    var cellModelArr = [CellModel(graphType: .barGraph), CellModel(exeLabel: "Upper Body", addedReps: "+150", reps: "300", graphType: .lineGraph)]
     
     var viewModel: HomeViewModel? {
         didSet {
@@ -37,22 +40,31 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         }
     }
     
+    
+    
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         let str = UIStoryboard(name: "Main", bundle: nil)
         
         let child_1 = str.instantiateViewController(withIdentifier: "ChildOneViewController") as! ChildOneViewController
-        child_1.viewModel = HomeViewModel()
+        child_1.viewModel = HomeViewModel(cellModelArr: cellModelArr)
         let child_2 = str.instantiateViewController(withIdentifier: "ChildTwoViewController") as! ChildTwoViewController
-        child_2.viewModel = HomeViewModel()
+        child_2.viewModel = HomeViewModel(cellModelArr: [])
         let child_3 = str.instantiateViewController(withIdentifier: "ChildThreeViewController") as! ChildThreeViewController
-        child_3.viewModel = HomeViewModel()
+        child_3.viewModel = HomeViewModel(cellModelArr: [])
 
 
         let childViewControllers = [child_1, child_2, child_3]
 
 
         return childViewControllers
+    }
+    
+    
+    @IBAction func menuAction(_ sender: UIBarButtonItem) {
+        if let container = so_containerViewController {
+            container.isSideViewControllerPresented = true
+        }
     }
     
 

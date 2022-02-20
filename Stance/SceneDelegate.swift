@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -14,11 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        if let navVC = window?.rootViewController as? UINavigationController {
-            if let vc = navVC.topViewController as? HomeViewController {
-                vc.viewModel = HomeViewModel()
-            }
-        }
+//        if let navVC = window?.rootViewController as? UINavigationController {
+//            if let vc = navVC.topViewController as? HomeViewController {
+//                vc.viewModel = HomeViewModel()
+//            }
+//        }
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }

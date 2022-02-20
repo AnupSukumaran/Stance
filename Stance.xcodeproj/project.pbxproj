@@ -23,6 +23,17 @@
 		C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FD27C193E900490829 /* ChildOneViewController.swift */; };
 		C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FF27C193FA00490829 /* ChildTwoViewController.swift */; };
 		C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0127C1940D00490829 /* ChildThreeViewController.swift */; };
+		C5942A0427C2941800490829 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0327C2941800490829 /* CellModel.swift */; };
+		C5942A0627C2AB6D00490829 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0527C2AB6D00490829 /* ContainerViewController.swift */; };
+		C5942A0827C2AC9400490829 /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0727C2AC9400490829 /* ContainerViewModel.swift */; };
+		C5942A0B27C2ACD000490829 /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0A27C2ACD000490829 /* NSObject+Ext.swift */; };
+		C5942A0D27C2B0DB00490829 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0C27C2B0DB00490829 /* LeftMenuViewController.swift */; };
+		C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0E27C2B36B00490829 /* MenuItemTableViewCell.swift */; };
+		C5942A1127C2B42F00490829 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1027C2B42F00490829 /* MenuModel.swift */; };
+		C5942A1327C2B4C100490829 /* LeftMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1227C2B4C100490829 /* LeftMenuViewModel.swift */; };
+		C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1427C2BD8600490829 /* UIDevice.swift */; };
+		C5942A1727C2E5A700490829 /* MyWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */; };
+		C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */; };
 		C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE540027C033E700A658A0 /* UICustomView.swift */; };
 		EECDDF5D81229E684FEE79D8 /* Pods_StanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CA400625513A0ED7F3D4EA /* Pods_StanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +83,17 @@
 		C59429FD27C193E900490829 /* ChildOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOneViewController.swift; sourceTree = "<group>"; };
 		C59429FF27C193FA00490829 /* ChildTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTwoViewController.swift; sourceTree = "<group>"; };
 		C5942A0127C1940D00490829 /* ChildThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildThreeViewController.swift; sourceTree = "<group>"; };
+		C5942A0327C2941800490829 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		C5942A0527C2AB6D00490829 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		C5942A0727C2AC9400490829 /* ContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
+		C5942A0A27C2ACD000490829 /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		C5942A0C27C2B0DB00490829 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		C5942A0E27C2B36B00490829 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		C5942A1027C2B42F00490829 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		C5942A1227C2B4C100490829 /* LeftMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewModel.swift; sourceTree = "<group>"; };
+		C5942A1427C2BD8600490829 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewController.swift; sourceTree = "<group>"; };
+		C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewModel.swift; sourceTree = "<group>"; };
 		C5BE540027C033E700A658A0 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				C51FD17827C15302007F4899 /* HomeViewModel.swift */,
+				C5942A0727C2AC9400490829 /* ContainerViewModel.swift */,
+				C5942A1227C2B4C100490829 /* LeftMenuViewModel.swift */,
+				C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,6 +165,9 @@
 				C59429FD27C193E900490829 /* ChildOneViewController.swift */,
 				C59429FF27C193FA00490829 /* ChildTwoViewController.swift */,
 				C5942A0127C1940D00490829 /* ChildThreeViewController.swift */,
+				C5942A0527C2AB6D00490829 /* ContainerViewController.swift */,
+				C5942A0C27C2B0DB00490829 /* LeftMenuViewController.swift */,
+				C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C51FD17C27C1609F007F4899 /* GraphTableViewCell.swift */,
+				C5942A0E27C2B36B00490829 /* MenuItemTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -177,6 +206,7 @@
 		C542E8A227C0044F009B84C1 /* Stance */ = {
 			isa = PBXGroup;
 			children = (
+				C5942A0927C2ACBC00490829 /* Exts */,
 				C542E8A327C0044F009B84C1 /* AppDelegate.swift */,
 				C542E8A527C0044F009B84C1 /* SceneDelegate.swift */,
 				C59429FB27C1879500490829 /* Model */,
@@ -211,8 +241,19 @@
 		C59429FB27C1879500490829 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5942A0327C2941800490829 /* CellModel.swift */,
+				C5942A1027C2B42F00490829 /* MenuModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C5942A0927C2ACBC00490829 /* Exts */ = {
+			isa = PBXGroup;
+			children = (
+				C5942A0A27C2ACD000490829 /* NSObject+Ext.swift */,
+				C5942A1427C2BD8600490829 /* UIDevice.swift */,
+			);
+			path = Exts;
 			sourceTree = "<group>";
 		};
 		F5432EC948E8310C8AC94B24 /* Frameworks */ = {
@@ -469,14 +510,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */,
+				C5942A1127C2B42F00490829 /* MenuModel.swift in Sources */,
+				C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */,
 				C51FD17D27C1609F007F4899 /* GraphTableViewCell.swift in Sources */,
 				C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */,
+				C5942A0827C2AC9400490829 /* ContainerViewModel.swift in Sources */,
 				C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */,
+				C5942A0627C2AB6D00490829 /* ContainerViewController.swift in Sources */,
+				C5942A0427C2941800490829 /* CellModel.swift in Sources */,
 				C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */,
 				C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
+				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
+				C5942A0B27C2ACD000490829 /* NSObject+Ext.swift in Sources */,
+				C5942A1727C2E5A700490829 /* MyWorkoutViewController.swift in Sources */,
 				C51FD17927C15302007F4899 /* HomeViewModel.swift in Sources */,
 				C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */,
+				C5942A0D27C2B0DB00490829 /* LeftMenuViewController.swift in Sources */,
+				C5942A1327C2B4C100490829 /* LeftMenuViewModel.swift in Sources */,
 				C51FD17727C145DA007F4899 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -639,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -665,6 +717,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,6 +747,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -2,21 +2,25 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - SidebarOverlay (4.2.2)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Charts
+  - SidebarOverlay
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - Charts
+    - SidebarOverlay
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  SidebarOverlay: a5365455a2f9d54f70d0765764ca1a2806b1b11d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: c2a6257cb25d8f132ea3f54ccf1c69b8cd64acbe
+PODFILE CHECKSUM: 1ca6ba24c61605dedce70766ea4556d172a99de9
 
 COCOAPODS: 1.11.2
