@@ -34,7 +34,17 @@ extension LeftMenuViewController {
         viewModel.itemSelectionHandler = { [weak self] index in
             guard let vc = self else {return}
             switch index {
-            case 0: break
+            case 0:
+                
+                if let container = vc.so_containerViewController {
+                    container.isSideViewControllerPresented = false
+                    let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+                    controller.viewModel = ProfileViewModel()
+                    let nav = UINavigationController.init(rootViewController: controller)
+                    nav.modalPresentationStyle = .fullScreen
+                    container.topViewController = nav
+                }
+                
             case 1:
                 
                 if let container = vc.so_containerViewController {
@@ -46,14 +56,28 @@ extension LeftMenuViewController {
                     container.topViewController = nav
                 }
                 
-            case 2: break
-            case 3: break
+            case 2:
+                
+                if let container = vc.so_containerViewController {
+                    container.isSideViewControllerPresented = false
+                    let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProgrammesViewController") as! ProgrammesViewController
+                    controller.viewModel = ProgrammesViewModel(programesItems: vc.viewModel.programesItems)
+                    let nav = UINavigationController.init(rootViewController: controller)
+                    nav.modalPresentationStyle = .fullScreen
+                    container.topViewController = nav
+                }
+                
+            case 3:
+                if let container = vc.so_containerViewController {
+                    container.isSideViewControllerPresented = false
+                }
             default:
                 break
             }
         }
         
     }
+    
 }
 
 

@@ -2,13 +2,15 @@
 //  UICustomView.swift
 //  Stance
 //
-//  Created by Sukumar Anup Sukumaran on 18/02/2022.
+//  Created by Sukumar Anup Sukumaran on 21/02/2022.
 //
+
+
 
 import UIKit
 
 @IBDesignable
-public class UIViewCustom: UIView {
+public class UICustomView: UIView {
     
     // the gradient layer
     public var gradient: CAGradientLayer?

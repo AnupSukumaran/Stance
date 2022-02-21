@@ -20,6 +20,13 @@
 		C542E8BB27C00454009B84C1 /* StanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8BA27C00454009B84C1 /* StanceTests.swift */; };
 		C542E8C527C00454009B84C1 /* StanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C427C00454009B84C1 /* StanceUITests.swift */; };
 		C542E8C727C00454009B84C1 /* StanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */; };
+		C559E8A427C31EAE004A3E01 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A327C31EAE004A3E01 /* UICustomView.swift */; };
+		C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A527C329B9004A3E01 /* UICustomButton.swift */; };
+		C559E8A827C3B36D004A3E01 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */; };
+		C559E8AA27C3CDAF004A3E01 /* StartWorkOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A927C3CDAF004A3E01 /* StartWorkOutViewController.swift */; };
+		C559E8AC27C3D8F6004A3E01 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */; };
+		C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */; };
+		C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */; };
 		C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FD27C193E900490829 /* ChildOneViewController.swift */; };
 		C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FF27C193FA00490829 /* ChildTwoViewController.swift */; };
 		C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0127C1940D00490829 /* ChildThreeViewController.swift */; };
@@ -34,7 +41,11 @@
 		C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1427C2BD8600490829 /* UIDevice.swift */; };
 		C5942A1727C2E5A700490829 /* MyWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */; };
 		C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */; };
-		C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE540027C033E700A658A0 /* UICustomView.swift */; };
+		C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */; };
+		C5ECF61227C3084A00C3FAD3 /* ProgrammesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */; };
+		C5ECF61427C308C800C3FAD3 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */; };
+		C5ECF61627C3192A00C3FAD3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */; };
+		C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61727C3195F00C3FAD3 /* ProfileViewModel.swift */; };
 		EECDDF5D81229E684FEE79D8 /* Pods_StanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CA400625513A0ED7F3D4EA /* Pods_StanceTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +91,13 @@
 		C542E8C027C00454009B84C1 /* StanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8C427C00454009B84C1 /* StanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITests.swift; sourceTree = "<group>"; };
 		C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C559E8A327C31EAE004A3E01 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
+		C559E8A527C329B9004A3E01 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
+		C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		C559E8A927C3CDAF004A3E01 /* StartWorkOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkOutViewController.swift; sourceTree = "<group>"; };
+		C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutExeTableViewCell.swift; sourceTree = "<group>"; };
+		C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkOutViewModel.swift; sourceTree = "<group>"; };
 		C59429FD27C193E900490829 /* ChildOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOneViewController.swift; sourceTree = "<group>"; };
 		C59429FF27C193FA00490829 /* ChildTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTwoViewController.swift; sourceTree = "<group>"; };
 		C5942A0127C1940D00490829 /* ChildThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildThreeViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +112,11 @@
 		C5942A1427C2BD8600490829 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewController.swift; sourceTree = "<group>"; };
 		C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewModel.swift; sourceTree = "<group>"; };
-		C5BE540027C033E700A658A0 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
+		C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammesViewController.swift; sourceTree = "<group>"; };
+		C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammesViewModel.swift; sourceTree = "<group>"; };
+		C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C5ECF61727C3195F00C3FAD3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +167,9 @@
 				C5942A0727C2AC9400490829 /* ContainerViewModel.swift */,
 				C5942A1227C2B4C100490829 /* LeftMenuViewModel.swift */,
 				C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */,
+				C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */,
+				C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */,
+				C5ECF61727C3195F00C3FAD3 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -154,6 +179,8 @@
 			children = (
 				C51FD17B27C16081007F4899 /* Cells */,
 				C51FD17527C1458A007F4899 /* ViewControllers */,
+				C559E8A327C31EAE004A3E01 /* UICustomView.swift */,
+				C559E8A527C329B9004A3E01 /* UICustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +195,9 @@
 				C5942A0527C2AB6D00490829 /* ContainerViewController.swift */,
 				C5942A0C27C2B0DB00490829 /* LeftMenuViewController.swift */,
 				C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */,
+				C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */,
+				C559E8A927C3CDAF004A3E01 /* StartWorkOutViewController.swift */,
+				C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +207,9 @@
 			children = (
 				C51FD17C27C1609F007F4899 /* GraphTableViewCell.swift */,
 				C5942A0E27C2B36B00490829 /* MenuItemTableViewCell.swift */,
+				C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */,
+				C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */,
+				C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,7 +249,6 @@
 				C542E8AC27C00453009B84C1 /* Assets.xcassets */,
 				C542E8AE27C00453009B84C1 /* LaunchScreen.storyboard */,
 				C542E8B127C00453009B84C1 /* Info.plist */,
-				C5BE540027C033E700A658A0 /* UICustomView.swift */,
 			);
 			path = Stance;
 			sourceTree = "<group>";
@@ -243,6 +275,7 @@
 			children = (
 				C5942A0327C2941800490829 /* CellModel.swift */,
 				C5942A1027C2B42F00490829 /* MenuModel.swift */,
+				C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,10 +544,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */,
+				C559E8AC27C3D8F6004A3E01 /* SectionTableViewCell.swift in Sources */,
 				C5942A1127C2B42F00490829 /* MenuModel.swift in Sources */,
 				C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */,
+				C5ECF61427C308C800C3FAD3 /* ProgramTableViewCell.swift in Sources */,
 				C51FD17D27C1609F007F4899 /* GraphTableViewCell.swift in Sources */,
-				C5BE540127C033E700A658A0 /* UICustomView.swift in Sources */,
+				C5ECF61627C3192A00C3FAD3 /* ProfileViewController.swift in Sources */,
 				C5942A0827C2AC9400490829 /* ContainerViewModel.swift in Sources */,
 				C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */,
 				C5942A0627C2AB6D00490829 /* ContainerViewController.swift in Sources */,
@@ -522,13 +557,22 @@
 				C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */,
 				C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
+				C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */,
 				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
+				C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */,
+				C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */,
+				C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */,
 				C5942A0B27C2ACD000490829 /* NSObject+Ext.swift in Sources */,
+				C559E8AA27C3CDAF004A3E01 /* StartWorkOutViewController.swift in Sources */,
+				C5ECF61227C3084A00C3FAD3 /* ProgrammesViewModel.swift in Sources */,
 				C5942A1727C2E5A700490829 /* MyWorkoutViewController.swift in Sources */,
 				C51FD17927C15302007F4899 /* HomeViewModel.swift in Sources */,
+				C559E8A427C31EAE004A3E01 /* UICustomView.swift in Sources */,
 				C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */,
 				C5942A0D27C2B0DB00490829 /* LeftMenuViewController.swift in Sources */,
+				C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */,
 				C5942A1327C2B4C100490829 /* LeftMenuViewModel.swift in Sources */,
+				C559E8A827C3B36D004A3E01 /* WorkoutModel.swift in Sources */,
 				C51FD17727C145DA007F4899 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

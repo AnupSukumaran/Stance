@@ -62,8 +62,8 @@
             filePath = "Stance/View/ViewControllers/LeftMenuViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "setHandlers()"
             landmarkType = "7">
          </BreakpointContent>
@@ -114,6 +114,18 @@
             endingLineNumber = "28"
             landmarkName = "closeAction(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "3259E12C-A738-486B-BD03-8DE343398FA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

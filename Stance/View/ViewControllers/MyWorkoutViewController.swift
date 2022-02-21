@@ -14,7 +14,7 @@ class MyWorkoutViewController: UIViewController {
     
     var viewModel: MyWorkoutViewModel! {
         didSet {
-            
+            setHandler()
         }
     }
 
@@ -36,4 +36,19 @@ class MyWorkoutViewController: UIViewController {
     }
     
     
+}
+
+extension MyWorkoutViewController {
+    
+    func setHandler() {
+        viewModel.selectionHandler = { [weak self] model in
+            guard let controller = self else {return}
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartWorkOutViewController") as! StartWorkOutViewController
+            vc.viewModel = StartWorkOutViewModel(workoutModel: model)
+            //let nav = UINavigationController(rootViewController: vc)
+            //nav.modalPresentationStyle = .fullScreen
+            controller.navigationController?.pushViewController(vc, animated: true)
+//            controller.present(nav, animated: true, completion: nil)
+        }
+    }
 }

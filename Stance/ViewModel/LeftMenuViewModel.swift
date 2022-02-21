@@ -21,6 +21,8 @@ class LeftMenuViewModel: NSObject {
                                   MenuModel(imgIcon: UIImage(named: "Core"), itemLable: "Core"),
                                   MenuModel(imgIcon: UIImage(named: "Custom Programme"), itemLable: "Custom Programme")]
     
+    var programesItems = ["Shoulders - 04/10", "Back - 03/10", "Arms - 02/10", "Core - 02/10", "Legs - 01/10", "Core - 01/10"]
+    
     init(menuItems:[MenuModel] = []) {
         self.menuItems = menuItems
     }
@@ -39,27 +41,7 @@ extension LeftMenuViewModel: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         itemSelectionHandler?(indexPath.row)
-        
-//        switch indexPath.row {
-//            
-//        case 0: break
-//            
-//        case 1: break
-//            
-//            
-////            let vc = UIStoryboard().instantiateViewController(withIdentifier: "MyWorkoutViewController") as! MyWorkoutViewController
-////            vc.viewModel = HomeViewModel()
-////            let nav = UINavigationController.init(rootViewController: vc)
-////            nav.modalPresentationStyle = .fullScreen
-//            
-//        case 2: break
-//        case 3: break
-//            
-//        default:
-//            break
-//        }
     }
     
     
