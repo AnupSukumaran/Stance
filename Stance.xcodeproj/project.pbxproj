@@ -33,6 +33,7 @@
 		C582D09E27C5164300CD15F0 /* SASKeyboardPack in Frameworks */ = {isa = PBXBuildFile; productRef = C582D09D27C5164300CD15F0 /* SASKeyboardPack */; };
 		C582D0A027C51C6A00CD15F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09F27C51C6A00CD15F0 /* Constants.swift */; };
 		C582D0A327C528D200CD15F0 /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C582D0A227C528D200CD15F0 /* SASCustomAlert */; };
+		C582D0A527C597A300CD15F0 /* RepCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */; };
 		C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FD27C193E900490829 /* ChildOneViewController.swift */; };
 		C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FF27C193FA00490829 /* ChildTwoViewController.swift */; };
 		C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A0127C1940D00490829 /* ChildThreeViewController.swift */; };
@@ -108,6 +109,7 @@
 		C582D09827C50E1200CD15F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C582D09F27C51C6A00CD15F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterViewController.swift; sourceTree = "<group>"; };
 		C59429FD27C193E900490829 /* ChildOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOneViewController.swift; sourceTree = "<group>"; };
 		C59429FF27C193FA00490829 /* ChildTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTwoViewController.swift; sourceTree = "<group>"; };
 		C5942A0127C1940D00490829 /* ChildThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildThreeViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */,
 				C559E8A927C3CDAF004A3E01 /* StartWorkOutViewController.swift */,
 				C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */,
+				C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				C5942A1327C2B4C100490829 /* LeftMenuViewModel.swift in Sources */,
 				C559E8A827C3B36D004A3E01 /* WorkoutModel.swift in Sources */,
 				C51FD17727C145DA007F4899 /* HomeViewController.swift in Sources */,
+				C582D0A527C597A300CD15F0 /* RepCounterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -140,7 +140,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "signInAction(_:)"
+            landmarkName = "signUpAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
