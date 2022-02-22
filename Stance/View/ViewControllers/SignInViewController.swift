@@ -15,6 +15,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passHideBtn: UIButton!
+    @IBOutlet weak var activityIndic: UIActivityIndicatorView!
     
     var viewModel: SignInViewModel? {
         didSet {
@@ -25,6 +26,7 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         emailTF.text = "test@email.com"
         password.text = "password"
         passHideBtn.setTitle("", for: .normal)
@@ -42,30 +44,9 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInAction(_ sender: UIButton) {
         
+        activityIndicAction()
     
-        guard let email = emailTF.text, let password = password.text else {
-            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg, buttonTitle: .btnTitle, selfClass: self)
-            return
-        }
         
-        guard let regEmail = UserDefaults.standard.value(forKey: .username) as? String,
-              let regPassword = UserDefaults.standard.value(forKey: .password) as? String,
-              email == regEmail,
-              password == regPassword
-        else {
-            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg2, buttonTitle: .btnTitle, selfClass: self)
-            return
-        }
-        
-        UserDefaults.standard.set("inSession", forKey: .sessionKey)
-        
-        if let container = self.so_containerViewController {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.viewModel = HomeViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            container.topViewController = nav
-        }
     }
     
     @IBAction func forgotPasswordBtn(_ sender: UIButton) {
@@ -93,4 +74,48 @@ class SignInViewController: UIViewController {
         KeyBrd().deregisterKBNotific()
     }
     
+}
+
+
+extension SignInViewController {
+    
+    func activityIndicAction() {
+        activityIndic.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        self.view.alpha = 0.5
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.activityIndic.stopAnimating()
+            self.view.isUserInteractionEnabled = true
+            self.view.alpha = 1
+            self.settingSessionCallingHomeViewController()
+        }
+        
+    }
+    
+    func settingSessionCallingHomeViewController() {
+        guard let email = emailTF.text, let password = password.text else {
+            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg, buttonTitle: .btnTitle, selfClass: self)
+            return
+        }
+
+        guard let regEmail = UserDefaults.standard.value(forKey: .username) as? String,
+              let regPassword = UserDefaults.standard.value(forKey: .password) as? String,
+              email == regEmail,
+              password == regPassword
+        else {
+            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg2, buttonTitle: .btnTitle, selfClass: self)
+            return
+        }
+
+        UserDefaults.standard.set("inSession", forKey: .sessionKey)
+
+        if let container = self.so_containerViewController {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.viewModel = HomeViewModel()
+            let nav = UINavigationController.init(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            container.topViewController = nav
+        }
+    }
 }
