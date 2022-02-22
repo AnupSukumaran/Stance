@@ -73,6 +73,15 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
+        print("SignUp....")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        
+        vc.viewModel = ProfileViewModel(fromSignIn: true)
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        
+        present(nav, animated: true, completion: nil)
         
     }
     

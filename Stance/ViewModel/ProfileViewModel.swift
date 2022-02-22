@@ -9,4 +9,9 @@ import UIKit
 
 class ProfileViewModel: NSObject {
 
+    var fromSignIn: Bool = true
+    
+    init(fromSignIn: Bool) {
+        self.fromSignIn = fromSignIn
+    }
 }

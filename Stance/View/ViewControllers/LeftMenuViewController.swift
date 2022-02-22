@@ -40,7 +40,7 @@ extension LeftMenuViewController {
             case 0:
                 
                     let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-                    controller.viewModel = ProfileViewModel()
+                controller.viewModel = ProfileViewModel(fromSignIn: false)
                     let nav = UINavigationController.init(rootViewController: controller)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav

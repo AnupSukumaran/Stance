@@ -16,5 +16,7 @@ extension String {
     static var alertTitle = "Message"
     static var alertMsg = "Please type your username and password"
     static var alertMsg2 = "Credentials are not valid!. Please try again."
+    static var alertMsg3 = "Submission successful"
+    static var alertMsg4 = "Edit successful"
     static var btnTitle = "OK"
 }
