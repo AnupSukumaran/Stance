@@ -45,6 +45,7 @@ extension MyWorkoutViewController {
             guard let controller = self else {return}
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartWorkOutViewController") as! StartWorkOutViewController
             vc.viewModel = StartWorkOutViewModel(workoutModel: model)
+            //controller.navigationController?.navigationItem.backBarButtonItem?.title = ""
             //let nav = UINavigationController(rootViewController: vc)
             //nav.modalPresentationStyle = .fullScreen
             controller.navigationController?.pushViewController(vc, animated: true)

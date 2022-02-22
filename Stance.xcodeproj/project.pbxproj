@@ -20,6 +20,7 @@
 		C542E8BB27C00454009B84C1 /* StanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8BA27C00454009B84C1 /* StanceTests.swift */; };
 		C542E8C527C00454009B84C1 /* StanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C427C00454009B84C1 /* StanceUITests.swift */; };
 		C542E8C727C00454009B84C1 /* StanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */; };
+		C55146D527C447C100DD25D5 /* HomeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55146D427C447C100DD25D5 /* HomeSectionTableViewCell.swift */; };
 		C559E8A427C31EAE004A3E01 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A327C31EAE004A3E01 /* UICustomView.swift */; };
 		C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A527C329B9004A3E01 /* UICustomButton.swift */; };
 		C559E8A827C3B36D004A3E01 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */; };
@@ -91,6 +92,7 @@
 		C542E8C027C00454009B84C1 /* StanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8C427C00454009B84C1 /* StanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITests.swift; sourceTree = "<group>"; };
 		C542E8C627C00454009B84C1 /* StanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C55146D427C447C100DD25D5 /* HomeSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionTableViewCell.swift; sourceTree = "<group>"; };
 		C559E8A327C31EAE004A3E01 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		C559E8A527C329B9004A3E01 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */,
 				C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */,
 				C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */,
+				C55146D427C447C100DD25D5 /* HomeSectionTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				C51FD17927C15302007F4899 /* HomeViewModel.swift in Sources */,
 				C559E8A427C31EAE004A3E01 /* UICustomView.swift in Sources */,
 				C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */,
+				C55146D527C447C100DD25D5 /* HomeSectionTableViewCell.swift in Sources */,
 				C5942A0D27C2B0DB00490829 /* LeftMenuViewController.swift in Sources */,
 				C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */,
 				C5942A1327C2B4C100490829 /* LeftMenuViewModel.swift in Sources */,

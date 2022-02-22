@@ -32,9 +32,9 @@ class ChildOneViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        viewModel!.adaptingTableViewCells(graphTableView)
-        graphTableView.reloadData()
-        graphTableView.layoutIfNeeded()
+       // viewModel!.adaptingTableViewCells(graphTableView)
+        //graphTableView.reloadData()
+        //graphTableView.layoutIfNeeded()
     }
 
 }

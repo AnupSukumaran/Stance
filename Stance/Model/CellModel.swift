@@ -19,9 +19,9 @@ class CellModel {
     var exeLabel: String?
     var addedReps: String?
     var reps: String?
-    var graphType: ChartType?
+    var graphType = [ChartType]()
     
-    internal init(exeLabel: String? = nil, addedReps: String? = nil, reps: String? = nil, graphType: ChartType? = nil) {
+    internal init(exeLabel: String? = nil, addedReps: String? = nil, reps: String? = nil, graphType:[ChartType] = []) {
         self.exeLabel = exeLabel
         self.addedReps = addedReps
         self.reps = reps
