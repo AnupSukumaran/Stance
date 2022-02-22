@@ -33,44 +33,47 @@ extension LeftMenuViewController {
         
         viewModel.itemSelectionHandler = { [weak self] index in
             guard let vc = self else {return}
+            guard let container = vc.so_containerViewController else {return}
+            container.isSideViewControllerPresented = false
+            
             switch index {
             case 0:
                 
-                if let container = vc.so_containerViewController {
-                    container.isSideViewControllerPresented = false
                     let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
                     controller.viewModel = ProfileViewModel()
                     let nav = UINavigationController.init(rootViewController: controller)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
-                }
+                
                 
             case 1:
-                
-                if let container = vc.so_containerViewController {
-                    container.isSideViewControllerPresented = false
+                    
                     let controller = vc.storyboard!.instantiateViewController(withIdentifier: "MyWorkoutViewController") as! MyWorkoutViewController
                     controller.viewModel = MyWorkoutViewModel(workoutItems: vc.viewModel.workoutItems)
                     let nav = UINavigationController.init(rootViewController: controller)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
-                }
+                
                 
             case 2:
                 
-                if let container = vc.so_containerViewController {
-                    container.isSideViewControllerPresented = false
                     let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProgrammesViewController") as! ProgrammesViewController
                     controller.viewModel = ProgrammesViewModel(programesItems: vc.viewModel.programesItems)
                     let nav = UINavigationController.init(rootViewController: controller)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
-                }
+            
                 
-            case 3:
-                if let container = vc.so_containerViewController {
-                    container.isSideViewControllerPresented = false
-                }
+            case 3: break
+                
+            
+            case 4:
+                    UserDefaults.standard.removeObject(forKey: .sessionKey)
+                    let signInVC = vc.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+                    signInVC.viewModel = SignInViewModel()
+                    container.topViewController = signInVC
+               
+                
             default:
                 break
             }

@@ -14,6 +14,8 @@ class ContainerViewController: SOContainerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set("test@email.com", forKey: .username)
+        UserDefaults.standard.set("password", forKey: .password)
         setTopView()
     }
     
@@ -28,11 +30,17 @@ class ContainerViewController: SOContainerViewController {
 extension ContainerViewController {
     
     func setTopView() {
+        let signInVC = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        signInVC.viewModel = SignInViewModel()
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         vc.viewModel = HomeViewModel()
         let nav = UINavigationController.init(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
-        topViewController = nav
+        
+        topViewController = (UserDefaults.standard.value(forKey: .sessionKey) == nil) ? signInVC : nav
+        
+       
     }
     
     func settingSideView() {

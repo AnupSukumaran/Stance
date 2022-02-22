@@ -26,6 +26,7 @@ class ContainerViewModel: NSObject {
     var menuItems: [MenuModel] = [MenuModel(imgIcon: UIImage(named: "Person"), itemLable: "Profile"),
                                   MenuModel(imgIcon: UIImage(named: "dumbbell"), itemLable: "My workouts"),
                                   MenuModel(imgIcon: UIImage(named: "checkList"), itemLable: "Programmes"),
-                                  MenuModel(imgIcon: UIImage(named: "progress"), itemLable: "Progress")]
+                                  MenuModel(imgIcon: UIImage(named: "progress"), itemLable: "Progress"),
+                                  MenuModel(imgIcon: UIImage(named: "LogOut"), itemLable: "Sign Out")]
 
 }

@@ -14,17 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        if let navVC = window?.rootViewController as? UINavigationController {
-//            
-//            if let vc = navVC.topViewController as? HomeViewController {
-//                
-//                vc.viewModel = HomeViewModel()
-//            } else {
-//                
-//            }
-//        } else {
-//            
-//        }
+        
         return true
     }
 
