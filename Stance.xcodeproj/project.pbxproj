@@ -12,6 +12,9 @@
 		C51FD17727C145DA007F4899 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FD17627C145DA007F4899 /* HomeViewController.swift */; };
 		C51FD17927C15302007F4899 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FD17827C15302007F4899 /* HomeViewModel.swift */; };
 		C51FD17D27C1609F007F4899 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51FD17C27C1609F007F4899 /* GraphTableViewCell.swift */; };
+		C530D31027C8363D002FE35F /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C530D30F27C8363D002FE35F /* SASCustomAlert */; };
+		C530D31327C83723002FE35F /* SASKeyboardPack in Frameworks */ = {isa = PBXBuildFile; productRef = C530D31227C83723002FE35F /* SASKeyboardPack */; };
+		C530D31527C84004002FE35F /* RepCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31427C84004002FE35F /* RepCounterViewModel.swift */; };
 		C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A327C0044F009B84C1 /* AppDelegate.swift */; };
 		C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A527C0044F009B84C1 /* SceneDelegate.swift */; };
 		C542E8AB27C0044F009B84C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C542E8A927C0044F009B84C1 /* Main.storyboard */; };
@@ -30,9 +33,7 @@
 		C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */; };
 		C582D09927C50E1200CD15F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09827C50E1200CD15F0 /* SignInViewController.swift */; };
 		C582D09B27C50E7300CD15F0 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */; };
-		C582D09E27C5164300CD15F0 /* SASKeyboardPack in Frameworks */ = {isa = PBXBuildFile; productRef = C582D09D27C5164300CD15F0 /* SASKeyboardPack */; };
 		C582D0A027C51C6A00CD15F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09F27C51C6A00CD15F0 /* Constants.swift */; };
-		C582D0A327C528D200CD15F0 /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C582D0A227C528D200CD15F0 /* SASCustomAlert */; };
 		C582D0A527C597A300CD15F0 /* RepCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */; };
 		C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FD27C193E900490829 /* ChildOneViewController.swift */; };
 		C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59429FF27C193FA00490829 /* ChildTwoViewController.swift */; };
@@ -48,6 +49,8 @@
 		C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1427C2BD8600490829 /* UIDevice.swift */; };
 		C5942A1727C2E5A700490829 /* MyWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */; };
 		C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */; };
+		C5C196AF27C7B0AF008F60EE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C196AE27C7B0AF008F60EE /* GradientView.swift */; };
+		C5C196B127C7F9A3008F60EE /* InWorkOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C196B027C7F9A3008F60EE /* InWorkOutViewController.swift */; };
 		C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */; };
 		C5ECF61227C3084A00C3FAD3 /* ProgrammesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */; };
 		C5ECF61427C308C800C3FAD3 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */; };
@@ -86,6 +89,7 @@
 		C51FD17627C145DA007F4899 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C51FD17827C15302007F4899 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C51FD17C27C1609F007F4899 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		C530D31427C84004002FE35F /* RepCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterViewModel.swift; sourceTree = "<group>"; };
 		C542E8A027C0044F009B84C1 /* Stance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8A327C0044F009B84C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C542E8A527C0044F009B84C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 		C5942A1427C2BD8600490829 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		C5942A1627C2E5A700490829 /* MyWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewController.swift; sourceTree = "<group>"; };
 		C5942A1827C2E62800490829 /* MyWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkoutViewModel.swift; sourceTree = "<group>"; };
+		C5C196AE27C7B0AF008F60EE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C5C196B027C7F9A3008F60EE /* InWorkOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InWorkOutViewController.swift; sourceTree = "<group>"; };
 		C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammesViewController.swift; sourceTree = "<group>"; };
 		C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammesViewModel.swift; sourceTree = "<group>"; };
 		C5ECF61327C308C800C3FAD3 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,9 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C582D09E27C5164300CD15F0 /* SASKeyboardPack in Frameworks */,
+				C530D31027C8363D002FE35F /* SASCustomAlert in Frameworks */,
 				A5EAD5D00FE8D5C14BF7C946 /* Pods_Stance.framework in Frameworks */,
-				C582D0A327C528D200CD15F0 /* SASCustomAlert in Frameworks */,
+				C530D31327C83723002FE35F /* SASKeyboardPack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +191,7 @@
 				C5ECF61127C3084A00C3FAD3 /* ProgrammesViewModel.swift */,
 				C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */,
 				C5ECF61727C3195F00C3FAD3 /* ProfileViewModel.swift */,
+				C530D31427C84004002FE35F /* RepCounterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				C51FD17527C1458A007F4899 /* ViewControllers */,
 				C559E8A327C31EAE004A3E01 /* UICustomView.swift */,
 				C559E8A527C329B9004A3E01 /* UICustomButton.swift */,
+				C5C196AE27C7B0AF008F60EE /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 				C5ECF60F27C3082C00C3FAD3 /* ProgrammesViewController.swift */,
 				C559E8A927C3CDAF004A3E01 /* StartWorkOutViewController.swift */,
 				C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */,
+				C5C196B027C7F9A3008F60EE /* InWorkOutViewController.swift */,
 				C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */,
 			);
 			path = ViewControllers;
@@ -337,8 +346,8 @@
 			);
 			name = Stance;
 			packageProductDependencies = (
-				C582D09D27C5164300CD15F0 /* SASKeyboardPack */,
-				C582D0A227C528D200CD15F0 /* SASCustomAlert */,
+				C530D30F27C8363D002FE35F /* SASCustomAlert */,
+				C530D31227C83723002FE35F /* SASKeyboardPack */,
 			);
 			productName = Stance;
 			productReference = C542E8A027C0044F009B84C1 /* Stance.app */;
@@ -417,8 +426,8 @@
 			mainGroup = C542E89727C0044F009B84C1;
 			packageReferences = (
 				C51FD17A27C15514007F4899 /* XCRemoteSwiftPackageReference "SASIBViews" */,
-				C582D09C27C5164300CD15F0 /* XCRemoteSwiftPackageReference "SASKeyboardPack" */,
-				C582D0A127C528D200CD15F0 /* XCRemoteSwiftPackageReference "SASCustomAlert" */,
+				C530D30E27C8363D002FE35F /* XCRemoteSwiftPackageReference "SASCustomAlert" */,
+				C530D31127C83723002FE35F /* XCRemoteSwiftPackageReference "SASKeyboardPack" */,
 			);
 			productRefGroup = C542E8A127C0044F009B84C1 /* Products */;
 			projectDirPath = "";
@@ -566,7 +575,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C530D31527C84004002FE35F /* RepCounterViewModel.swift in Sources */,
 				C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */,
+				C5C196B127C7F9A3008F60EE /* InWorkOutViewController.swift in Sources */,
 				C559E8AC27C3D8F6004A3E01 /* SectionTableViewCell.swift in Sources */,
 				C5942A1127C2B42F00490829 /* MenuModel.swift in Sources */,
 				C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */,
@@ -581,6 +592,7 @@
 				C59429FE27C193E900490829 /* ChildOneViewController.swift in Sources */,
 				C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
+				C5C196AF27C7B0AF008F60EE /* GradientView.swift in Sources */,
 				C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */,
 				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
 				C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */,
@@ -967,34 +979,34 @@
 				kind = branch;
 			};
 		};
-		C582D09C27C5164300CD15F0 /* XCRemoteSwiftPackageReference "SASKeyboardPack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AnupSukumaran/SASKeyboardPack.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		C582D0A127C528D200CD15F0 /* XCRemoteSwiftPackageReference "SASCustomAlert" */ = {
+		C530D30E27C8363D002FE35F /* XCRemoteSwiftPackageReference "SASCustomAlert" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AnupSukumaran/SASCustomAlert.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = master;
+				kind = branch;
+			};
+		};
+		C530D31127C83723002FE35F /* XCRemoteSwiftPackageReference "SASKeyboardPack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnupSukumaran/SASKeyboardPack.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C582D09D27C5164300CD15F0 /* SASKeyboardPack */ = {
+		C530D30F27C8363D002FE35F /* SASCustomAlert */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C582D09C27C5164300CD15F0 /* XCRemoteSwiftPackageReference "SASKeyboardPack" */;
-			productName = SASKeyboardPack;
-		};
-		C582D0A227C528D200CD15F0 /* SASCustomAlert */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C582D0A127C528D200CD15F0 /* XCRemoteSwiftPackageReference "SASCustomAlert" */;
+			package = C530D30E27C8363D002FE35F /* XCRemoteSwiftPackageReference "SASCustomAlert" */;
 			productName = SASCustomAlert;
+		};
+		C530D31227C83723002FE35F /* SASKeyboardPack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C530D31127C83723002FE35F /* XCRemoteSwiftPackageReference "SASKeyboardPack" */;
+			productName = SASKeyboardPack;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

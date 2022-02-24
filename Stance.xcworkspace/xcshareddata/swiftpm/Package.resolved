@@ -5,9 +5,9 @@
         "package": "SASCustomAlert",
         "repositoryURL": "https://github.com/AnupSukumaran/SASCustomAlert.git",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "8c5b4c629eee5df31210949320ea5c38b0e9cb4c",
-          "version": "1.0.2"
+          "version": null
         }
       },
       {
@@ -23,9 +23,9 @@
         "package": "SASKeyboardPack",
         "repositoryURL": "https://github.com/AnupSukumaran/SASKeyboardPack.git",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "a976437e243c688924ece63bb0b824b2da083495",
-          "version": "1.0.3"
+          "version": null
         }
       },
       {

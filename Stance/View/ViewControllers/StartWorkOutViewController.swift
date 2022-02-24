@@ -35,6 +35,10 @@ class StartWorkOutViewController: UIViewController {
     
     
     @IBAction func startWorkoutAction(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InWorkOutViewController") as! InWorkOutViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
 }
