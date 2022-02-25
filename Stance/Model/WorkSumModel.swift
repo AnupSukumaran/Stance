@@ -31,31 +31,46 @@ class TimeModel {
     var addedReps: String?
     var totIbs: String?
     var totTime: String?
+    var addedTime: String?
     
-    internal init(totTitle: String? = nil, addedReps: String? = nil, totIbs: String? = nil, totTime: String? = nil) {
+    internal init(totTitle: String? = nil, addedReps: String? = nil, totIbs: String? = nil, totTime: String? = nil, addedTime: String? = nil) {
         self.totTitle = totTitle
         self.addedReps = addedReps
         self.totIbs = totIbs
         self.totTime = totTime
+        self.addedTime = addedTime
     }
     
 }
 
-class WorkSumModel {
-  
-    var dateStr: String?
-    var timeStr: String?
-    var caption: String?
-    var timeModel = [TimeModel]()
+class WorkSumSectionData {
+    
+    
     var movSecTitle: String?
+    var timeModel = [TimeModel]()
     var movementModelArr = [MovementModel]()
     
-    internal init(dateStr: String? = nil, timeStr: String? = nil, caption: String? = nil, timeModel: [TimeModel] = [TimeModel](), movSecTitle: String? = nil, movementModelArr: [MovementModel] = [MovementModel]()) {
-        self.dateStr = dateStr
-        self.timeStr = timeStr
-        self.caption = caption
-        self.timeModel = timeModel
+    internal init(movSecTitle: String? = nil, timeModel: [TimeModel] = [], movementModelArr: [MovementModel] = []) {
         self.movSecTitle = movSecTitle
+        self.timeModel = timeModel
         self.movementModelArr = movementModelArr
+    }
+    
+}
+
+
+class WorkSumModel {
+  
+    var id: Int?
+    var viewTitle: String?
+    var caption: String?
+    var workSumSectionData = [WorkSumSectionData]()
+    
+    internal init(id:Int? = nil, viewTitle: String? = nil, caption: String? = nil, workSumSectionData: [WorkSumSectionData] = []) {
+        self.id = id
+        self.viewTitle = viewTitle
+        self.caption = caption
+        self.workSumSectionData = workSumSectionData
+       
     }
 }

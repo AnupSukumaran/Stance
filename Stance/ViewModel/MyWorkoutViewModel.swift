@@ -17,9 +17,9 @@ class MyWorkoutViewModel: NSObject {
     
     var workOuts2: [WorkOuts] = [
         WorkOuts(exeImg: UIImage(named: "Chest"), equipmentStatus: false, exeName: "Bench Press", reps: "15 Reps", refreshActive: true),
-        WorkOuts(exeImg: UIImage(named: "Legs"), exeName: "Rest", reps: "30 Seconds", forRest: true, refreshActive: false),
+        WorkOuts(exeImg: UIImage(named: "30"), exeName: "Rest", reps: "30 Seconds", forRest: true, refreshActive: false),
         WorkOuts(exeImg: UIImage(named: "Chest"), equipmentStatus: false, exeName: "Bench Press", reps: "15 Reps", refreshActive: true),
-        WorkOuts(exeImg: UIImage(named: "Legs"), exeName: "Rest", reps: "30 Seconds", forRest: true, refreshActive: false),
+        WorkOuts(exeImg: UIImage(named: "30"), exeName: "Rest", reps: "30 Seconds", forRest: true, refreshActive: false),
         WorkOuts(exeImg: UIImage(named: "Chest"), equipmentStatus: false, exeName: "Bench Press", reps: "15 Reps", refreshActive: true)]
     
     var sectionData = [SectionData]()

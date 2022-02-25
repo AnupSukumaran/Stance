@@ -35,6 +35,10 @@
 		C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */; };
 		C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */; };
 		C55E775A27C86F9E00971987 /* WorkOutSummViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E775927C86F9E00971987 /* WorkOutSummViewController.swift */; };
+		C57E2E0E27C915A500C9AB6F /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E2E0D27C915A500C9AB6F /* TotalTableViewCell.swift */; };
+		C57E2E1027C915C800C9AB6F /* SectionMovTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E2E0F27C915C800C9AB6F /* SectionMovTableViewCell.swift */; };
+		C57E2E1227C915E500C9AB6F /* ExcerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E2E1127C915E500C9AB6F /* ExcerciseTableViewCell.swift */; };
+		C57E2E1427C918BD00C9AB6F /* WorkOutSummViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E2E1327C918BD00C9AB6F /* WorkOutSummViewModel.swift */; };
 		C582D09927C50E1200CD15F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09827C50E1200CD15F0 /* SignInViewController.swift */; };
 		C582D09B27C50E7300CD15F0 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */; };
 		C582D0A027C51C6A00CD15F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09F27C51C6A00CD15F0 /* Constants.swift */; };
@@ -118,6 +122,10 @@
 		C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutExeTableViewCell.swift; sourceTree = "<group>"; };
 		C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkOutViewModel.swift; sourceTree = "<group>"; };
 		C55E775927C86F9E00971987 /* WorkOutSummViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSummViewController.swift; sourceTree = "<group>"; };
+		C57E2E0D27C915A500C9AB6F /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		C57E2E0F27C915C800C9AB6F /* SectionMovTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMovTableViewCell.swift; sourceTree = "<group>"; };
+		C57E2E1127C915E500C9AB6F /* ExcerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseTableViewCell.swift; sourceTree = "<group>"; };
+		C57E2E1327C918BD00C9AB6F /* WorkOutSummViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSummViewModel.swift; sourceTree = "<group>"; };
 		C582D09827C50E1200CD15F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C582D09F27C51C6A00CD15F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 				C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */,
 				C5ECF61727C3195F00C3FAD3 /* ProfileViewModel.swift */,
 				C530D31427C84004002FE35F /* RepCounterViewModel.swift */,
+				C57E2E1327C918BD00C9AB6F /* WorkOutSummViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -247,6 +256,9 @@
 				C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */,
 				C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */,
 				C55146D427C447C100DD25D5 /* HomeSectionTableViewCell.swift */,
+				C57E2E0D27C915A500C9AB6F /* TotalTableViewCell.swift */,
+				C57E2E0F27C915C800C9AB6F /* SectionMovTableViewCell.swift */,
+				C57E2E1127C915E500C9AB6F /* ExcerciseTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -590,6 +602,7 @@
 				C530D31527C84004002FE35F /* RepCounterViewModel.swift in Sources */,
 				C5942A1927C2E62800490829 /* MyWorkoutViewModel.swift in Sources */,
 				C5C196B127C7F9A3008F60EE /* InWorkOutViewController.swift in Sources */,
+				C57E2E1227C915E500C9AB6F /* ExcerciseTableViewCell.swift in Sources */,
 				C559E8AC27C3D8F6004A3E01 /* SectionTableViewCell.swift in Sources */,
 				C5942A1127C2B42F00490829 /* MenuModel.swift in Sources */,
 				C5942A1527C2BD8600490829 /* UIDevice.swift in Sources */,
@@ -605,10 +618,12 @@
 				C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
 				C5C196AF27C7B0AF008F60EE /* GradientView.swift in Sources */,
+				C57E2E0E27C915A500C9AB6F /* TotalTableViewCell.swift in Sources */,
 				C530D31927C852E8002FE35F /* RestViewController.swift in Sources */,
 				C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */,
 				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
 				C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */,
+				C57E2E1427C918BD00C9AB6F /* WorkOutSummViewModel.swift in Sources */,
 				C530D31B27C86C6F002FE35F /* WorkSumModel.swift in Sources */,
 				C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */,
 				C530D31727C84EDF002FE35F /* UIViewController+Ext.swift in Sources */,
@@ -623,6 +638,7 @@
 				C55E775A27C86F9E00971987 /* WorkOutSummViewController.swift in Sources */,
 				C582D09B27C50E7300CD15F0 /* SignInViewModel.swift in Sources */,
 				C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */,
+				C57E2E1027C915C800C9AB6F /* SectionMovTableViewCell.swift in Sources */,
 				C55146D527C447C100DD25D5 /* HomeSectionTableViewCell.swift in Sources */,
 				C5942A0D27C2B0DB00490829 /* LeftMenuViewController.swift in Sources */,
 				C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */,

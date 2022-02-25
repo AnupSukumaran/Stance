@@ -15,7 +15,7 @@ class ProgrammesViewController: UIViewController {
     
     var viewModel: ProgrammesViewModel! {
         didSet{
-            
+            setHandler()
         }
     }
 
@@ -37,3 +37,13 @@ class ProgrammesViewController: UIViewController {
     
 }
 
+
+extension ProgrammesViewController {
+    
+    func setHandler() {
+        viewModel.selectionHandler = { model in
+            let viewM = WorkOutSummViewModel(workSumModel: model)
+            self.navigationController?.pushViewController(.callVCWorkOutSummViewCntr(viewModel: viewM), animated: true)
+        }
+    }
+}

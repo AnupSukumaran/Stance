@@ -33,4 +33,13 @@ extension UIViewController {
         
     }
     
+    static func callVCWorkOutSummViewCntr(viewModel: WorkOutSummViewModel) -> WorkOutSummViewController {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WorkOutSummViewController") as! WorkOutSummViewController
+        vc.viewModel = viewModel
+        vc.modalPresentationStyle = .fullScreen
+        return vc
+        
+    }
+    
 }
