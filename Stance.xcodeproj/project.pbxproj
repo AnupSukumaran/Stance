@@ -17,6 +17,7 @@
 		C530D31527C84004002FE35F /* RepCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31427C84004002FE35F /* RepCounterViewModel.swift */; };
 		C530D31727C84EDF002FE35F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31627C84EDF002FE35F /* UIViewController+Ext.swift */; };
 		C530D31927C852E8002FE35F /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31827C852E8002FE35F /* RestViewController.swift */; };
+		C530D31B27C86C6F002FE35F /* WorkSumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31A27C86C6F002FE35F /* WorkSumModel.swift */; };
 		C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A327C0044F009B84C1 /* AppDelegate.swift */; };
 		C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A527C0044F009B84C1 /* SceneDelegate.swift */; };
 		C542E8AB27C0044F009B84C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C542E8A927C0044F009B84C1 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		C559E8AC27C3D8F6004A3E01 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */; };
 		C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */; };
 		C559E8B027C3DE69004A3E01 /* StartWorkOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */; };
+		C55E775A27C86F9E00971987 /* WorkOutSummViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E775927C86F9E00971987 /* WorkOutSummViewController.swift */; };
 		C582D09927C50E1200CD15F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09827C50E1200CD15F0 /* SignInViewController.swift */; };
 		C582D09B27C50E7300CD15F0 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */; };
 		C582D0A027C51C6A00CD15F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582D09F27C51C6A00CD15F0 /* Constants.swift */; };
@@ -94,6 +96,7 @@
 		C530D31427C84004002FE35F /* RepCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterViewModel.swift; sourceTree = "<group>"; };
 		C530D31627C84EDF002FE35F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		C530D31827C852E8002FE35F /* RestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestViewController.swift; sourceTree = "<group>"; };
+		C530D31A27C86C6F002FE35F /* WorkSumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSumModel.swift; sourceTree = "<group>"; };
 		C542E8A027C0044F009B84C1 /* Stance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8A327C0044F009B84C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C542E8A527C0044F009B84C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		C559E8AB27C3D8F6004A3E01 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
 		C559E8AD27C3D916004A3E01 /* WorkOutExeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutExeTableViewCell.swift; sourceTree = "<group>"; };
 		C559E8AF27C3DE69004A3E01 /* StartWorkOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkOutViewModel.swift; sourceTree = "<group>"; };
+		C55E775927C86F9E00971987 /* WorkOutSummViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSummViewController.swift; sourceTree = "<group>"; };
 		C582D09827C50E1200CD15F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C582D09A27C50E7300CD15F0 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C582D09F27C51C6A00CD15F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				C5C196B027C7F9A3008F60EE /* InWorkOutViewController.swift */,
 				C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */,
 				C530D31827C852E8002FE35F /* RestViewController.swift */,
+				C55E775927C86F9E00971987 /* WorkOutSummViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				C5942A0327C2941800490829 /* CellModel.swift */,
 				C5942A1027C2B42F00490829 /* MenuModel.swift */,
 				C559E8A727C3B36D004A3E01 /* WorkoutModel.swift */,
+				C530D31A27C86C6F002FE35F /* WorkSumModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */,
 				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
 				C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */,
+				C530D31B27C86C6F002FE35F /* WorkSumModel.swift in Sources */,
 				C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */,
 				C530D31727C84EDF002FE35F /* UIViewController+Ext.swift in Sources */,
 				C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */,
@@ -613,6 +620,7 @@
 				C51FD17927C15302007F4899 /* HomeViewModel.swift in Sources */,
 				C582D0A027C51C6A00CD15F0 /* Constants.swift in Sources */,
 				C559E8A427C31EAE004A3E01 /* UICustomView.swift in Sources */,
+				C55E775A27C86F9E00971987 /* WorkOutSummViewController.swift in Sources */,
 				C582D09B27C50E7300CD15F0 /* SignInViewModel.swift in Sources */,
 				C5942A0227C1940D00490829 /* ChildThreeViewController.swift in Sources */,
 				C55146D527C447C100DD25D5 /* HomeSectionTableViewCell.swift in Sources */,
