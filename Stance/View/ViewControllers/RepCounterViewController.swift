@@ -10,6 +10,7 @@ import UIKit
 class RepCounterViewController: UIViewController {
 
     @IBOutlet weak var setCountLB: UILabel!
+    @IBOutlet weak var repsCountLB: UILabel!
     @IBOutlet weak var counterView: UIView!
     @IBOutlet weak var countLB: UILabel!
     
@@ -23,6 +24,7 @@ class RepCounterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = ""
+        repsCountLB.text = "\(viewModel.secs) Reps"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +38,6 @@ class RepCounterViewController: UIViewController {
         countLB.text = viewModel.resetMetrics()
     }
     
-
 }
 
 
@@ -51,26 +52,30 @@ extension RepCounterViewController {
     }
     
     func setHandlers() {
+        
         viewModel.timerHandler = { [weak self] str in
             self?.countLB.text = str
         }
         
         viewModel.restHandler = { [weak self]  in
             guard let vc = self else {return}
-            vc.navigationController?.pushViewController(.restViewCntrCall(delegate: vc.viewModel), animated: true)
+            vc.navigationController?.pushViewController(.restViewCntrCall(setCount: vc.viewModel.setCnt, delegate: vc.viewModel), animated: true)
         }
         
-        viewModel.setCountHandler = { [weak self] setCnt in
+        viewModel.setCountHandler = { [weak self] isSetLimit, setCnt in
             guard let vc = self else {return}
-            guard setCnt <= vc.viewModel.limitedSetCnt else {
-                vc.setCountLB.text = "SET DONE 👍"
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    vc.navigationController?.popToRootViewController(animated: true)
-                }
-                
+            guard isSetLimit else {
+                vc.setCompletedAction()
                 return
             }
             vc.setCountLB.text = "SET \(setCnt)"
+        }
+    }
+    
+    func setCompletedAction() {
+        setCountLB.text = "SET DONE 👍"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

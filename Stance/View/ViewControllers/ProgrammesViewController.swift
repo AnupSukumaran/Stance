@@ -9,9 +9,7 @@ import UIKit
 
 class ProgrammesViewController: UIViewController {
     
-    
     @IBOutlet weak var programsTableView: UITableView!
-    
     
     var viewModel: ProgrammesViewModel! {
         didSet{
@@ -27,9 +25,7 @@ class ProgrammesViewController: UIViewController {
     
     @IBAction func closeAction(_ sender: UIButton) {
         if let container = self.so_containerViewController {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.viewModel = HomeViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
+            let nav = UINavigationController.init(rootViewController: .homeVC)
             nav.modalPresentationStyle = .fullScreen
             container.topViewController = nav
         }

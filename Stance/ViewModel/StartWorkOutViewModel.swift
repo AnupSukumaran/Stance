@@ -42,9 +42,7 @@ extension StartWorkOutViewModel: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTableViewCell") as! SectionTableViewCell
-        
         cell.config(sectionData: workoutModel?.sectionData[section])
-    
         return cell.contentView
     }
     
@@ -55,6 +53,5 @@ extension StartWorkOutViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 78
     }
-    
     
 }

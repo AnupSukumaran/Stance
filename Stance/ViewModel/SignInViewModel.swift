@@ -12,7 +12,7 @@ class SignInViewModel: NSObject {
     var alertHandler: (() -> Void)?
     
     func checkSuccess(email: String, password: String) -> Bool {
-        guard let regEmail = UserDefaults.standard.value(forKey: .username) as? String,
+        guard let regEmail = UserDefaults.standard.value(forKey: .userEmail) as? String,
               let regPassword = UserDefaults.standard.value(forKey: .password) as? String,
               email == regEmail,
               password == regPassword

@@ -21,8 +21,6 @@ class LeftMenuViewController: UIViewController {
         super.viewDidLoad()
         menuTable.delegate = viewModel
         menuTable.dataSource = viewModel
-        
-        
     }
     
 }
@@ -38,28 +36,19 @@ extension LeftMenuViewController {
             
             switch index {
             case 0:
-                
-                    let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-                controller.viewModel = ProfileViewModel(fromSignIn: false)
-                    let nav = UINavigationController.init(rootViewController: controller)
+                let nav = UINavigationController.init(rootViewController: .profileVC)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
                 
                 
             case 1:
-                    
-                    let controller = vc.storyboard!.instantiateViewController(withIdentifier: "MyWorkoutViewController") as! MyWorkoutViewController
-                    controller.viewModel = MyWorkoutViewModel(workoutItems: vc.viewModel.workoutItems)
-                    let nav = UINavigationController.init(rootViewController: controller)
+                let nav = UINavigationController.init(rootViewController: .myWorkoutVC)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
                 
                 
             case 2:
-                
-                    let controller = vc.storyboard!.instantiateViewController(withIdentifier: "ProgrammesViewController") as! ProgrammesViewController
-                    controller.viewModel = ProgrammesViewModel(programesItems: vc.viewModel.programesItems)
-                    let nav = UINavigationController.init(rootViewController: controller)
+                let nav = UINavigationController.init(rootViewController: .programmesVC)
                     nav.modalPresentationStyle = .fullScreen
                     container.topViewController = nav
             
@@ -68,10 +57,9 @@ extension LeftMenuViewController {
                 
             
             case 4:
-                    UserDefaults.standard.removeObject(forKey: .sessionKey)
+                    vc.viewModel.clearSession()
                     container.topViewController = .signInVC
                
-                
             default:
                 break
             }

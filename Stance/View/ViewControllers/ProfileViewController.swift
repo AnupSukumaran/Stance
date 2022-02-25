@@ -11,15 +11,10 @@ import SASCustomAlert
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var leftView: UIView!
-    
     @IBOutlet weak var rightView: UIView!
-    
-    
     @IBOutlet weak var leftBtn: UIButton!
     @IBOutlet weak var closeBtn: UIButton!
-    
     @IBOutlet weak var submitBtn: UIButton!
     
     var viewModel: ProfileViewModel! {
@@ -29,68 +24,51 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingUplabelsBtnTitles()
+    }
+    
+    @IBAction func submitBtnAction(_ sender: UIButton) {
+        showingAlertForEditAndSubmit()
+    }
+    
+    @IBAction func leftBtnAction(_ sender: Any) {
+        dismiss(animated: true) {
+            self.callingHomeVC()
+        }
+    }
+    
+    @IBAction func closeAction(_ sender: UIButton) {
+        callingHomeVC()
+    }
+    
+}
+
+extension ProfileViewController {
+    
+    func showingAlertForEditAndSubmit() {
+        let msgTxt: String = viewModel.fromSignIn ? .alertMsg3 : .alertMsg4
+        UIAlertController.showAlertWithComBLK(title: .alertTitle, message: msgTxt, buttonTitle: .btnTitle, selfClass: self) {
+            guard self.viewModel.fromSignIn  else {
+                self.callingHomeVC()
+                return
+            }
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func settingUplabelsBtnTitles() {
         leftView.isHidden = !viewModel.fromSignIn
         rightView.isHidden = viewModel.fromSignIn
         let btnTitle = viewModel.fromSignIn ? "SUBMIT" : "EDIT"
         submitBtn.setTitle(btnTitle, for: .normal)
     }
     
-    
-    
-    
-    @IBAction func submitBtnAction(_ sender: UIButton) {
-        let msgTxt: String = viewModel.fromSignIn ? .alertMsg3 : .alertMsg4
-        UIAlertController.showAlertWithComBLK(title: .alertTitle, message: msgTxt, buttonTitle: .btnTitle, selfClass: self) {
-            
-            
-            if self.viewModel.fromSignIn {
-                
-                self.dismiss(animated: true)
-                
-            } else {
-                if let container = self.so_containerViewController {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                    vc.viewModel = HomeViewModel()
-                    let nav = UINavigationController.init(rootViewController: vc)
-                    nav.modalPresentationStyle = .fullScreen
-                    container.topViewController = nav
-                }
-            }
-            
-            
-            
-        }
+    func callingHomeVC() {
+        guard let container = self.so_containerViewController else {return}
+        let nav = UINavigationController.init(rootViewController: .homeVC)
+        nav.modalPresentationStyle = .fullScreen
+        container.topViewController = nav
     }
-    
-    @IBAction func leftBtnAction(_ sender: Any) {
-        
-        dismiss(animated: true) {
-            
-            if let container = self.so_containerViewController {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                vc.viewModel = HomeViewModel()
-                let nav = UINavigationController.init(rootViewController: vc)
-                nav.modalPresentationStyle = .fullScreen
-                container.topViewController = nav
-            }
-            
-        }
-        
-    }
-    
-    @IBAction func closeAction(_ sender: UIButton) {
-        if let container = self.so_containerViewController {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.viewModel = HomeViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            container.topViewController = nav
-        }
-    }
-    
-    
-    
-
 }
 
 

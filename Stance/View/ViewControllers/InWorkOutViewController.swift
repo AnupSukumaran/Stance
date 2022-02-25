@@ -11,11 +11,7 @@ class InWorkOutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "Bench Press"
-
+        setNav()
     }
     
     @IBAction func btnAction(_ sender: Any) {
@@ -24,4 +20,11 @@ class InWorkOutViewController: UIViewController {
 
 }
 
-
+extension InWorkOutViewController {
+    
+    func setNav() {
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.title = "Bench Press"
+    }
+}

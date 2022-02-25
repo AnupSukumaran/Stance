@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SidebarOverlay
 
 extension UIViewController {
     
@@ -69,10 +69,55 @@ extension UIViewController {
         return child_3
     }
     
-    static func restViewCntrCall(delegate: RepCounterViewModelDelegate) -> RestViewController {
+    static var leftMenuVC: LeftMenuViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
+        
+        let menuItems: [MenuModel] = [MenuModel(imgIcon: UIImage(named: "Person"), itemLable: "Profile"),
+                                      MenuModel(imgIcon: UIImage(named: "dumbbell"), itemLable: "My workouts"),
+                                      MenuModel(imgIcon: UIImage(named: "checkList"), itemLable: "Programmes"),
+                                      MenuModel(imgIcon: UIImage(named: "progress"), itemLable: "Progress"),
+                                      MenuModel(imgIcon: UIImage(named: "LogOut"), itemLable: "Sign Out")]
+        
+        vc.viewModel = LeftMenuViewModel(menuItems: menuItems)
+        return vc
+    }
+    
+   
+    static var myWorkoutVC: MyWorkoutViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "MyWorkoutViewController") as! MyWorkoutViewController
+        let workoutItems: [MenuModel] = [MenuModel(imgIcon: UIImage(named: "Chest"), itemLable: "Chest"),
+                                      MenuModel(imgIcon: UIImage(named: "Arms"), itemLable: "Arms"),
+                                      MenuModel(imgIcon: UIImage(named: "Legs"), itemLable: "Legs"),
+                                      MenuModel(imgIcon: UIImage(named: "Back"), itemLable: "Back"),
+                                      MenuModel(imgIcon: UIImage(named: "Shoulders"), itemLable: "Shoulders"),
+                                      MenuModel(imgIcon: UIImage(named: "Core"), itemLable: "Core"),
+                                      MenuModel(imgIcon: UIImage(named: "Custom Programme"), itemLable: "Custom Programme")]
+        vc.viewModel = MyWorkoutViewModel(workoutItems: workoutItems)
+        return vc
+    }
+    
+    static var programmesVC: ProgrammesViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "ProgrammesViewController") as! ProgrammesViewController
+        let programesItems = ["Shoulders - 04/10", "Back - 03/10", "Arms - 02/10", "Core - 02/10", "Legs - 01/10", "Core - 01/10"]
+        vc.viewModel = ProgrammesViewModel(programesItems: programesItems)
+        return vc
+    }
+    
+    static var inWorkOutVC: InWorkOutViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "InWorkOutViewController") as! InWorkOutViewController
+        return vc
+    }
+    
+    static func startWorkOutVC(model: WorkoutModel) -> StartWorkOutViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "StartWorkOutViewController") as! StartWorkOutViewController
+        vc.viewModel = StartWorkOutViewModel(workoutModel: model)
+        return vc
+    }
+    
+    static func restViewCntrCall(setCount: Int, delegate: RepCounterViewModelDelegate) -> RestViewController {
         
         let vc = mainStoryBoard.instantiateViewController(withIdentifier: "RestViewController") as! RestViewController
-        vc.viewModel = RepCounterViewModel(secs: 3, delegate: delegate)
+        vc.viewModel = RepCounterViewModel(secs: 3, setCnt: setCount, delegate: delegate)
         vc.modalPresentationStyle = .fullScreen
         return vc
         
@@ -87,7 +132,11 @@ extension UIViewController {
         
     }
     
-    
+    static func callLeftMenuVC(menuItems: [MenuModel]) -> LeftMenuViewController {
+        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
+        vc.viewModel = LeftMenuViewModel(menuItems: menuItems)
+        return vc
+    }
     
     
 }

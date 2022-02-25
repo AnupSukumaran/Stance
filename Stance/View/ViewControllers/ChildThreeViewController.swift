@@ -18,22 +18,17 @@ class ChildThreeViewController: UIViewController {
         }
     }
     
-    var itemInfo = IndicatorInfo(title: "Past Month")
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         graphTableView.delegate = viewModel
         graphTableView.dataSource = viewModel
     }
 
-
 }
 
 extension ChildThreeViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
+        return IndicatorInfo(title: .tab3)
     }
 }
 

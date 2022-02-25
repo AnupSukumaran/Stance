@@ -16,35 +16,33 @@ class StartWorkOutViewController: UIViewController {
     
     var viewModel: StartWorkOutViewModel! {
         didSet {
-            setHandler()
         }
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        setUpNav()
+        settingAtt()
+    }
+    
+    @IBAction func startWorkoutAction(_ sender: Any) {
+        self.navigationController?.pushViewController(.inWorkOutVC, animated: true)
+    }
+    
+}
+
+extension StartWorkOutViewController {
+    
+    func setUpNav() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+    }
+    
+    func settingAtt() {
         workoutList.delegate = viewModel
         workoutList.dataSource = viewModel
         workOutTitle.text = viewModel.mainTitle
         subTitle.text = viewModel.subTitle
     }
     
-    
-    @IBAction func startWorkoutAction(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InWorkOutViewController") as! InWorkOutViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-
-    }
-    
-}
-
-extension StartWorkOutViewController {
-    func setHandler() {
-        
-    }
 }

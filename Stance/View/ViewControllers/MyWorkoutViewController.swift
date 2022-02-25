@@ -25,16 +25,12 @@ class MyWorkoutViewController: UIViewController {
     }
     
     @IBAction func closeAction(_ sender: UIButton) {
-        
         if let container = self.so_containerViewController {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.viewModel = HomeViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
+            let nav = UINavigationController.init(rootViewController: .homeVC)
             nav.modalPresentationStyle = .fullScreen
             container.topViewController = nav
         }
     }
-    
     
 }
 
@@ -42,14 +38,7 @@ extension MyWorkoutViewController {
     
     func setHandler() {
         viewModel.selectionHandler = { [weak self] model in
-            guard let controller = self else {return}
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartWorkOutViewController") as! StartWorkOutViewController
-            vc.viewModel = StartWorkOutViewModel(workoutModel: model)
-            //controller.navigationController?.navigationItem.backBarButtonItem?.title = ""
-            //let nav = UINavigationController(rootViewController: vc)
-            //nav.modalPresentationStyle = .fullScreen
-            controller.navigationController?.pushViewController(vc, animated: true)
-//            controller.present(nav, animated: true, completion: nil)
+            self?.navigationController?.pushViewController(.startWorkOutVC(model: model), animated: true)
         }
     }
 }

@@ -22,20 +22,21 @@ class RepCounterViewModel: NSObject {
     var questTimer = Timer()
     var timerHandler: ((String) -> Void)?
     var restHandler: (() -> Void)?
-    var setCountHandler: ((Int) -> Void)?
+    var setCountHandler: ((Bool, Int) -> Void)?
     
     weak var delegate: RepCounterViewModelDelegate?
     
+    var inSetLimit: Bool {
+        return setCnt <= limitedSetCnt
+    }
     
-    init(secs: Int,limitedSetCnt: Int = 3, delegate: RepCounterViewModelDelegate? = nil) {
+    init(secs: Int,limitedSetCnt: Int = 3,setCnt: Int = 1, delegate: RepCounterViewModelDelegate? = nil) {
         self.secs = secs
         self.limitedSetCnt = limitedSetCnt
         self.delegate = delegate
+        self.setCnt = setCnt
     }
     
-    var curvedPath:( (UIView) -> UIBezierPath) = { contView in
-        return UIBezierPath(roundedRect: contView.bounds, cornerRadius: contView.frame.height/2)
-    }
     
     func getCurvedPath(view: UIView) -> UIBezierPath {
         return UIBezierPath(roundedRect: view.bounds, cornerRadius: view.frame.height/2)
@@ -77,15 +78,14 @@ class RepCounterViewModel: NSObject {
     
     func givingValuesToTimerLabel() -> String {
         count += 1
-        let x: CGFloat =  CGFloat(CGFloat(count)/CGFloat(secs))
-        let z: CGFloat = round(1000 * x)
-        point = CGFloat( z / 1000)
+        point = CGFloat(CGFloat(count)/CGFloat(secs))
         shapelayer.strokeEnd = point
         return String(format: "%01i" , count)
     }
     
+    
     func questTimer(isPaused: Bool) {
-        guard setCnt <= limitedSetCnt else {return}
+        guard inSetLimit else {return}
         switch isPaused {
             
         case true:
@@ -102,7 +102,10 @@ class RepCounterViewModel: NSObject {
         timerHandler?(givingValuesToTimerLabel())
         guard count >= secs else {return}
         questTimer(isPaused: true)
-        restHandler?()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.restHandler?()
+        }
+        
     }
     
 
@@ -113,13 +116,15 @@ class RepCounterViewModel: NSObject {
         return String(format: "%01i" , count)
     }
     
+   
+    
 }
 
 extension RepCounterViewModel: RepCounterViewModelDelegate {
     
     func setCount() {
         setCnt += 1
-        setCountHandler?(setCnt)        
+        setCountHandler?(inSetLimit, setCnt)
     }
     
 }

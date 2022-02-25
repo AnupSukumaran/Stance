@@ -14,8 +14,7 @@ class ContainerViewController: SOContainerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set("test@email.com", forKey: .username)
-        UserDefaults.standard.set("password", forKey: .password)
+        viewModel.setTestSession()
         setTopView()
     }
     
@@ -23,7 +22,6 @@ class ContainerViewController: SOContainerViewController {
         super.viewWillAppear(animated)
         settingSideView()
     }
-    
 
 }
 
@@ -37,9 +35,6 @@ extension ContainerViewController {
     
     func settingSideView() {
         sideMenuWidth = view.frame.width - viewModel.width
-        let vc = storyboard?.instantiateViewController(withIdentifier: "LeftMenuViewController") as! LeftMenuViewController
-        vc.viewModel = LeftMenuViewModel(menuItems: viewModel.menuItems)
-        sideViewController = vc
-        
+        sideViewController = .leftMenuVC
     }
 }

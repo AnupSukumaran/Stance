@@ -12,28 +12,22 @@ class ChildTwoViewController: UIViewController {
 
     @IBOutlet weak var graphTableView: UITableView!
     
-    
     var viewModel: HomeViewModel? {
         didSet {
            
         }
     }
     
-    var itemInfo = IndicatorInfo(title: "Past Week")
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         graphTableView.delegate = viewModel
         graphTableView.dataSource = viewModel
-        // Do any additional setup after loading the view.
     }
-    
 
 }
 
 extension ChildTwoViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
+        return IndicatorInfo(title: .tab2)
     }
 }

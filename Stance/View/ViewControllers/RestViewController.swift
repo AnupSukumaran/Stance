@@ -11,6 +11,7 @@ class RestViewController: UIViewController {
     
     @IBOutlet weak var counterView: UIView!
     @IBOutlet weak var countLB: UILabel!
+    @IBOutlet weak var setLabel: UILabel!
     
     var viewModel: RepCounterViewModel! {
         didSet {
@@ -21,6 +22,7 @@ class RestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = ""
+        setLabel.text = "SET \(viewModel.setCnt)/\(viewModel.limitedSetCnt)"
     }
     
     override func viewDidAppear(_ animated: Bool) {

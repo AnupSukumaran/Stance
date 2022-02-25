@@ -707,6 +707,7 @@
                     <connections>
                         <outlet property="countLB" destination="ic4-hf-2Cu" id="xv1-O8-37o"/>
                         <outlet property="counterView" destination="JeC-nH-J0V" id="iTR-Dl-DOW"/>
+                        <outlet property="repsCountLB" destination="gzh-l8-H37" id="ZBo-Sr-GUy"/>
                         <outlet property="setCountLB" destination="qoy-aS-xzU" id="Kkk-VA-sI4"/>
                     </connections>
                 </viewController>
@@ -2313,6 +2314,7 @@
                     <connections>
                         <outlet property="countLB" destination="X89-sC-oOd" id="ol8-MT-8rX"/>
                         <outlet property="counterView" destination="MX3-wY-mlD" id="fcL-z4-cIB"/>
+                        <outlet property="setLabel" destination="Y9y-a6-QVw" id="PNT-oT-PtP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNs-nz-wKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

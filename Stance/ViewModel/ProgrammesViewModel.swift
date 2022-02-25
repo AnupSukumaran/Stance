@@ -10,24 +10,30 @@ import UIKit
 class ProgrammesViewModel: NSObject {
     
     var programesItems = [String]()
-    
-    var timeModelArr: [TimeModel] = [TimeModel(totTitle: "TOTAL VOLUME", addedReps: "+412", totIbs: "9,481 lbs"),
-                                      TimeModel(totTitle: "TOTAL DURATION", totTime: "35:09"),
-                                     TimeModel(totTitle: "TIME UNDER TENSION", totTime: "20:30", addedTime: "+1:02")]
-    
-    var moveModelArr = [MovementModel(excerciseTitle: "Squat w / Row", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
-                     MovementModel(excerciseTitle: "Pull Through", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
-                     MovementModel(excerciseTitle: "Cable Crossover", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
-                     MovementModel(excerciseTitle: "Standing Bicep Curl", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max")]
-    
     var workSumSectionData = [WorkSumSectionData]()
     var workSumModel = [WorkSumModel]()
-    
     var selectionHandler: ((WorkSumModel) -> Void)?
 
-    
     init(programesItems: [String]) {
+        super.init()
         self.programesItems = programesItems
+        setData()
+    }
+    
+}
+
+extension ProgrammesViewModel {
+    
+    func setData() {
+        
+        let timeModelArr: [TimeModel] = [TimeModel(totTitle: "TOTAL VOLUME", addedReps: "+412", totIbs: "9,481 lbs"),
+                                          TimeModel(totTitle: "TOTAL DURATION", totTime: "35:09"),
+                                         TimeModel(totTitle: "TIME UNDER TENSION", totTime: "20:30", addedTime: "+1:02")]
+        
+        let moveModelArr = [MovementModel(excerciseTitle: "Squat w / Row", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
+                         MovementModel(excerciseTitle: "Pull Through", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
+                         MovementModel(excerciseTitle: "Cable Crossover", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max"),
+                         MovementModel(excerciseTitle: "Standing Bicep Curl", numSets: "4 Sets", reps: "10 Reps", ibs: "61lbs Max")]
         
         workSumSectionData = [WorkSumSectionData(timeModel: timeModelArr),
                               WorkSumSectionData(movSecTitle: "MOVEMENTS", movementModelArr: moveModelArr)]
@@ -40,6 +46,7 @@ class ProgrammesViewModel: NSObject {
                         WorkSumModel(id: 5, viewTitle: "Core 01/10/21 - 18:30", caption: "Compared to the some workout 0s 20/08/21", workSumSectionData: workSumSectionData)]
         
     }
+    
 }
 
 
@@ -50,9 +57,7 @@ extension ProgrammesViewModel: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProgramTableViewCell", for: indexPath) as! ProgramTableViewCell
-        
         cell.config(programesItems[indexPath.row])
-        
         return cell
     }
     
@@ -61,6 +66,5 @@ extension ProgrammesViewModel: UITableViewDelegate, UITableViewDataSource {
             selectionHandler?(workoutsData)
         }
     }
-    
     
 }
