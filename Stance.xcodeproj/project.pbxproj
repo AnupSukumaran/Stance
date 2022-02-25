@@ -15,6 +15,8 @@
 		C530D31027C8363D002FE35F /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C530D30F27C8363D002FE35F /* SASCustomAlert */; };
 		C530D31327C83723002FE35F /* SASKeyboardPack in Frameworks */ = {isa = PBXBuildFile; productRef = C530D31227C83723002FE35F /* SASKeyboardPack */; };
 		C530D31527C84004002FE35F /* RepCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31427C84004002FE35F /* RepCounterViewModel.swift */; };
+		C530D31727C84EDF002FE35F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31627C84EDF002FE35F /* UIViewController+Ext.swift */; };
+		C530D31927C852E8002FE35F /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C530D31827C852E8002FE35F /* RestViewController.swift */; };
 		C542E8A427C0044F009B84C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A327C0044F009B84C1 /* AppDelegate.swift */; };
 		C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542E8A527C0044F009B84C1 /* SceneDelegate.swift */; };
 		C542E8AB27C0044F009B84C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C542E8A927C0044F009B84C1 /* Main.storyboard */; };
@@ -90,6 +92,8 @@
 		C51FD17827C15302007F4899 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C51FD17C27C1609F007F4899 /* GraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
 		C530D31427C84004002FE35F /* RepCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterViewModel.swift; sourceTree = "<group>"; };
+		C530D31627C84EDF002FE35F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		C530D31827C852E8002FE35F /* RestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestViewController.swift; sourceTree = "<group>"; };
 		C542E8A027C0044F009B84C1 /* Stance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542E8A327C0044F009B84C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C542E8A527C0044F009B84C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				C5ECF61527C3192900C3FAD3 /* ProfileViewController.swift */,
 				C5C196B027C7F9A3008F60EE /* InWorkOutViewController.swift */,
 				C582D0A427C597A200CD15F0 /* RepCounterViewController.swift */,
+				C530D31827C852E8002FE35F /* RestViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				C5942A0A27C2ACD000490829 /* NSObject+Ext.swift */,
 				C5942A1427C2BD8600490829 /* UIDevice.swift */,
 				C582D09F27C51C6A00CD15F0 /* Constants.swift */,
+				C530D31627C84EDF002FE35F /* UIViewController+Ext.swift */,
 			);
 			path = Exts;
 			sourceTree = "<group>";
@@ -593,10 +599,12 @@
 				C5942A0027C193FA00490829 /* ChildTwoViewController.swift in Sources */,
 				C542E8A627C0044F009B84C1 /* SceneDelegate.swift in Sources */,
 				C5C196AF27C7B0AF008F60EE /* GradientView.swift in Sources */,
+				C530D31927C852E8002FE35F /* RestViewController.swift in Sources */,
 				C5ECF61827C3195F00C3FAD3 /* ProfileViewModel.swift in Sources */,
 				C5942A0F27C2B36B00490829 /* MenuItemTableViewCell.swift in Sources */,
 				C5ECF61027C3082C00C3FAD3 /* ProgrammesViewController.swift in Sources */,
 				C559E8A627C329B9004A3E01 /* UICustomButton.swift in Sources */,
+				C530D31727C84EDF002FE35F /* UIViewController+Ext.swift in Sources */,
 				C559E8AE27C3D916004A3E01 /* WorkOutExeTableViewCell.swift in Sources */,
 				C5942A0B27C2ACD000490829 /* NSObject+Ext.swift in Sources */,
 				C559E8AA27C3CDAF004A3E01 /* StartWorkOutViewController.swift in Sources */,

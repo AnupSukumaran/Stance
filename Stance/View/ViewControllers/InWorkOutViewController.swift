@@ -15,16 +15,13 @@ class InWorkOutViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.title = "Bench Press"
-       // self.navigationController?.navigationItem.title = "Bench Press"
+
     }
     
     @IBAction func btnAction(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RepCounterViewController") as! RepCounterViewController
-        vc.viewModel = RepCounterViewModel()
-        vc.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(vc, animated: true)
-    
+        self.navigationController?.pushViewController(.repCntViewCntr, animated: true)
     }
-    
 
 }
+
+

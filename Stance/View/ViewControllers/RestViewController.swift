@@ -1,25 +1,23 @@
 //
-//  RepCounterViewController.swift
+//  RestViewController.swift
 //  Stance
 //
-//  Created by Sukumar Anup Sukumaran on 22/02/2022.
+//  Created by Sukumar Anup Sukumaran on 24/02/2022.
 //
 
 import UIKit
 
-class RepCounterViewController: UIViewController {
-
-    @IBOutlet weak var setCountLB: UILabel!
+class RestViewController: UIViewController {
+    
     @IBOutlet weak var counterView: UIView!
     @IBOutlet weak var countLB: UILabel!
-    
     
     var viewModel: RepCounterViewModel! {
         didSet {
             setHandlers()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -30,17 +28,10 @@ class RepCounterViewController: UIViewController {
         creatingTimeLayout()
         viewModel.questTimer(isPaused: false)
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        countLB.text = viewModel.resetMetrics()
-    }
-    
 
 }
 
-
-extension RepCounterViewController {
+extension RestViewController {
     
     func creatingTimeLayout() {
         counterView.layer.cornerRadius = counterView.frame.height/2
@@ -56,21 +47,10 @@ extension RepCounterViewController {
         }
         
         viewModel.restHandler = { [weak self]  in
-            guard let vc = self else {return}
-            vc.navigationController?.pushViewController(.restViewCntrCall(delegate: vc.viewModel), animated: true)
+            self?.navigationController?.popViewController(animated: true)
+            self?.viewModel.delegate?.setCount()
         }
-        
-        viewModel.setCountHandler = { [weak self] setCnt in
-            guard let vc = self else {return}
-            guard setCnt <= vc.viewModel.limitedSetCnt else {
-                vc.setCountLB.text = "SET DONE)"
-                vc.navigationController?.popToRootViewController(animated: true)
-                return
-            }
-            vc.setCountLB.text = "SET \(setCnt)"
-        }
+
     }
     
 }
-
-
