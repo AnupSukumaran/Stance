@@ -63,8 +63,11 @@ extension RepCounterViewController {
         viewModel.setCountHandler = { [weak self] setCnt in
             guard let vc = self else {return}
             guard setCnt <= vc.viewModel.limitedSetCnt else {
-                vc.setCountLB.text = "SET DONE)"
-                vc.navigationController?.popToRootViewController(animated: true)
+                vc.setCountLB.text = "SET DONE 👍"
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    vc.navigationController?.popToRootViewController(animated: true)
+                }
+                
                 return
             }
             vc.setCountLB.text = "SET \(setCnt)"
