@@ -69,9 +69,7 @@ extension LeftMenuViewController {
             
             case 4:
                     UserDefaults.standard.removeObject(forKey: .sessionKey)
-                    let signInVC = vc.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-                    signInVC.viewModel = SignInViewModel()
-                    container.topViewController = signInVC
+                    container.topViewController = .signInVC
                
                 
             default:

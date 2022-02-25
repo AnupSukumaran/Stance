@@ -15,8 +15,9 @@ class HomeViewModel: NSObject {
     
     var cellModelArr = [CellModel]()
     
-    init(cellModelArr: [CellModel] = []) {
-        self.cellModelArr = cellModelArr
+    override init() {
+       cellModelArr = [CellModel(exeLabel: "Upper Body", addedReps: "+150", reps: "300", graphType: [.barGraph]),
+                            CellModel(exeLabel: "Legs", addedReps: "+50", reps: "200", graphType: [.lineGraph])]
     }
     
     func adaptingTableViewCells(_ table: UITableView) {
@@ -40,13 +41,7 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GraphTableViewCell", for: indexPath) as! GraphTableViewCell
-        cell.barChart.delegate = self
-//        if cellModelArr.isEmpty {
-//            cell.config()
-//        } else {
-            //cell.configV2( cellModel: cellModelArr[indexPath.row])
-       // }
-        
+        cell.barChart.delegate = self        
         cell.configV2(chartType: cellModelArr[indexPath.section].graphType[indexPath.row])
         return cell
     }

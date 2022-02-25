@@ -17,9 +17,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passHideBtn: UIButton!
     @IBOutlet weak var activityIndic: UIActivityIndicatorView!
     
-    var viewModel: SignInViewModel? {
+    var viewModel: SignInViewModel! {
         didSet {
-           
+            setHandler()
         }
     }
     
@@ -27,11 +27,11 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTF.text = "test@email.com"
-        password.text = "password"
+        emailTF.text = .tempEmail
+        password.text = .tempPass
         passHideBtn.setTitle("", for: .normal)
         KeyBrd().regKBNotific(scrollView, 120)
-        // Do any additional setup after loading the view.
+    
     }
     
     @IBAction func passBtnAction(_ sender: UIButton) {
@@ -43,25 +43,15 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
-        
         activityIndicAction()
-    
-        
     }
     
-    @IBAction func forgotPasswordBtn(_ sender: UIButton) {
-        
-    }
+    @IBAction func forgotPasswordBtn(_ sender: UIButton) {}
     
     @IBAction func signUpAction(_ sender: UIButton) {
-        print("SignUp....")
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         
-        vc.viewModel = ProfileViewModel(fromSignIn: true)
-        
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = UINavigationController(rootViewController: .profileVC)
         nav.modalPresentationStyle = .fullScreen
-        
         present(nav, animated: true, completion: nil)
         
     }
@@ -76,8 +66,16 @@ class SignInViewController: UIViewController {
     
 }
 
+//MARK: Functions
 
 extension SignInViewController {
+    
+    func setHandler() {
+        viewModel?.alertHandler = { [weak self] in
+            guard let vc = self else {return}
+            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg2, buttonTitle: .btnTitle, selfClass: vc)
+        }
+    }
     
     func activityIndicAction() {
         activityIndic.startAnimating()
@@ -99,23 +97,15 @@ extension SignInViewController {
             return
         }
 
-        guard let regEmail = UserDefaults.standard.value(forKey: .username) as? String,
-              let regPassword = UserDefaults.standard.value(forKey: .password) as? String,
-              email == regEmail,
-              password == regPassword
-        else {
-            UIAlertController.showAlert(title: .alertTitle, message: .alertMsg2, buttonTitle: .btnTitle, selfClass: self)
-            return
-        }
+        guard viewModel.checkSuccess(email: email, password: password) else {return}
+         
+        guard let container = self.so_containerViewController else {return}
+        
+        let nav = UINavigationController.init(rootViewController: .homeVC)
+        nav.modalPresentationStyle = .fullScreen
+        container.topViewController = nav
 
-        UserDefaults.standard.set("inSession", forKey: .sessionKey)
-
-        if let container = self.so_containerViewController {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.viewModel = HomeViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            container.topViewController = nav
-        }
     }
 }
+
+

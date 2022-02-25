@@ -13,6 +13,8 @@ extension String {
     static var sessionKey = "sessionKey"
     static var username = "username"
     static var password = "password"
+    static var tempEmail = "test@email.com"
+    static var tempPass = "password"
     static var alertTitle = "Message"
     static var alertMsg = "Please type your username and password"
     static var alertMsg2 = "Credentials are not valid!. Please try again."

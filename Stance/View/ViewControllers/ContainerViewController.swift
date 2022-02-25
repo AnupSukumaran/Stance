@@ -30,17 +30,9 @@ class ContainerViewController: SOContainerViewController {
 extension ContainerViewController {
     
     func setTopView() {
-        let signInVC = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-        signInVC.viewModel = SignInViewModel()
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc.viewModel = HomeViewModel()
-        let nav = UINavigationController.init(rootViewController: vc)
+        let nav = UINavigationController.init(rootViewController: .homeVC)
         nav.modalPresentationStyle = .fullScreen
-        
-        topViewController = (UserDefaults.standard.value(forKey: .sessionKey) == nil) ? signInVC : nav
-        
-       
+        topViewController = (UserDefaults.standard.value(forKey: .sessionKey) == nil) ? .signInVC : nav
     }
     
     func settingSideView() {
