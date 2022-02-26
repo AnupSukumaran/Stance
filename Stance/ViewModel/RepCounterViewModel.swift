@@ -99,7 +99,9 @@ class RepCounterViewModel: NSObject {
     }
     
     @objc func counterAction() {
-        timerHandler?(givingValuesToTimerLabel())
+        
+        let cntStr = givingValuesToTimerLabel()
+        timerHandler?(cntStr)
         guard count >= secs else {return}
         questTimer(isPaused: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

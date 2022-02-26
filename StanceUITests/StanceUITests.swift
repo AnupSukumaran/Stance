@@ -14,7 +14,7 @@ class StanceUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
+        XCUIApplication().launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
@@ -22,13 +22,46 @@ class StanceUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    func testSessionProcess() throws {
         let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let signInBtn = app.buttons["Sign In"]
+        
+        
+        if signInBtn.exists {
+            
+            let emailTXF = app.textFields["your@email.com"]
+            emailTXF.tap()
+            emailTXF.clearAndEnterText(text:"test@email.com")
+            
+            let passTXF = app.textFields["xxxxxxxxx"]
+            passTXF.tap()
+            passTXF.clearAndEnterText(text:"password")
+            
+            XCTAssertTrue(signInBtn.exists)
+            signInBtn.tap()
+            let homeNav = app.navigationBars["Stance"]
+            expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: homeNav, handler: nil)
+            waitForExpectations(timeout: 15, handler: nil)
+            homeNav.children(matching: .button).element(boundBy: 0).tap()
+            app.tables/*@START_MENU_TOKEN@*/.staticTexts["Sign Out"]/*[[".cells.staticTexts[\"Sign Out\"]",".staticTexts[\"Sign Out\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        } else {
+            
+            let homeNav = app.navigationBars["Stance"]
+            expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: homeNav, handler: nil)
+            waitForExpectations(timeout: 10, handler: nil)
+            homeNav.children(matching: .button).element(boundBy: 0).tap()
+            app.tables/*@START_MENU_TOKEN@*/.staticTexts["Sign Out"]/*[[".cells.staticTexts[\"Sign Out\"]",".staticTexts[\"Sign Out\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+            expectation(for: NSPredicate(format: "exists == 1"), evaluatedWith: signInBtn, handler: nil)
+            waitForExpectations(timeout: 4, handler: nil)
+            XCTAssertTrue(signInBtn.exists)
+        
+            
+        }
+        
+                
     }
 
     func testLaunchPerformance() throws {
@@ -38,5 +71,25 @@ class StanceUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+}
+
+extension XCUIElement {
+    /**
+     Removes any current text in the field before typing in the new value
+     - Parameter text: the text to enter into the field
+     */
+    func clearAndEnterText(text: String) {
+        guard let stringValue = self.value as? String else {
+            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+
+        self.tap()
+
+        let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
+
+        self.typeText(deleteString)
+        self.typeText(text)
     }
 }

@@ -12,11 +12,62 @@ class WorkOutSummViewModel: NSObject {
     var workSumModel: WorkSumModel?
     var navTitle = ""
     
-    init(workSumModel: WorkSumModel?) {
+    init(workSumModel: WorkSumModel? = nil) {
         self.workSumModel = workSumModel
         self.navTitle = workSumModel?.viewTitle ?? ""
     }
 
+}
+
+extension WorkOutSummViewModel {
+    
+    func getNumOfRowsInSec(index: Int) -> Int? {
+        var count: Int?
+        if workSumModel?.workSumSectionData[index].movSecTitle == nil {
+            count = workSumModel?.workSumSectionData[index].timeModel.count
+        } else {
+            count = workSumModel?.workSumSectionData[index].movementModelArr.count
+        }
+        return count
+    }
+    
+    func getTableCell(table: UITableView, indexPath: IndexPath) -> UITableViewCell? {
+        var cell: UITableViewCell?
+        
+        guard let sectionData = workSumModel?.workSumSectionData[indexPath.section] else {return cell}
+        
+        if sectionData.movSecTitle == nil {
+            let totCell = table.dequeueReusableCell(withIdentifier: "TotalTableViewCell", for: indexPath) as! TotalTableViewCell
+            totCell.config(model: sectionData.timeModel[indexPath.row])
+            cell = totCell
+        } else {
+            let exeCell = table.dequeueReusableCell(withIdentifier: "ExcerciseTableViewCell", for: indexPath) as! ExcerciseTableViewCell
+            exeCell.config(model: sectionData.movementModelArr[indexPath.row])
+            cell = exeCell
+        }
+        
+        return cell
+    }
+    
+    func getSectionCell(table: UITableView, secIndex: Int) -> UIView? {
+        let cell = table.dequeueReusableCell(withIdentifier: "SectionMovTableViewCell") as! SectionMovTableViewCell
+        
+        cell.sectionTitle.text = workSumModel?.workSumSectionData[secIndex].movSecTitle
+        
+        return cell.contentView
+    }
+    
+    func getCellAndSectionHeight(index: Int) -> CGFloat {
+        var cellHeight: CGFloat?
+        
+        if workSumModel?.workSumSectionData[index].movSecTitle == nil {
+            cellHeight = 65
+        } else {
+            cellHeight = 80
+        }
+        
+        return cellHeight ?? 0
+    }
 }
 
 extension WorkOutSummViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -26,42 +77,15 @@ extension WorkOutSummViewModel: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count: Int?
-        if workSumModel?.workSumSectionData[section].movSecTitle == nil {
-            count = workSumModel?.workSumSectionData[section].timeModel.count
-        } else {
-            count = workSumModel?.workSumSectionData[section].movementModelArr.count
-        }
-        
-        return count ?? 0
+        return getNumOfRowsInSec(index: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var cell: UITableViewCell!
-        
-        guard let sectionData = workSumModel?.workSumSectionData[indexPath.section] else {return cell}
-        
-        if sectionData.movSecTitle == nil {
-            let totCell = tableView.dequeueReusableCell(withIdentifier: "TotalTableViewCell", for: indexPath) as! TotalTableViewCell
-            totCell.config(model: sectionData.timeModel[indexPath.row])
-            cell = totCell
-        } else {
-            let exeCell = tableView.dequeueReusableCell(withIdentifier: "ExcerciseTableViewCell", for: indexPath) as! ExcerciseTableViewCell
-            exeCell.config(model: sectionData.movementModelArr[indexPath.row])
-            cell = exeCell
-        }
-        
-        
-        return cell
+        return getTableCell(table: tableView, indexPath: indexPath) ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionMovTableViewCell") as! SectionMovTableViewCell
-        
-        cell.sectionTitle.text = workSumModel?.workSumSectionData[section].movSecTitle
-        
-        return cell.contentView
+        return getSectionCell(table: tableView, secIndex: section)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -69,16 +93,7 @@ extension WorkOutSummViewModel: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        var cellHeight: CGFloat?
-        
-        if workSumModel?.workSumSectionData[indexPath.section].movSecTitle == nil {
-            cellHeight = 65
-        } else {
-            cellHeight = 80
-        }
-        
-        return cellHeight ?? 0
+        return getCellAndSectionHeight(index: indexPath.section)
     }
     
     
